@@ -30,7 +30,7 @@ export default function Home({ allPostsData }) {
         </p>
         <p>
           App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">
-            {process.env.COMMIT_REF ? process.env.COMMIT_REF.substring(0,8) : ''}
+            {process.env.COMMIT_REF}
           </a>
         </p>
       </section>
