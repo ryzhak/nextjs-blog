@@ -33,6 +33,11 @@ export default function Home({ allPostsData }) {
             1.0.0
           </a>
         </p>
+        <p>
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">
+            1.0.0
+          </a>
+        </p>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
