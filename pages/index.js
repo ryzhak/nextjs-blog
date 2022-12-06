@@ -17,7 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const MY_VAR = process.env.COMMIT_REF || undefined;
+  const MY_VAR = process.env.COMMIT_REF;
   return (
     <Layout home>
       <Head>
