@@ -38,6 +38,14 @@ export default function Home({ allPostsData }) {
             1.0.0
           </a>
         </p>
+        <div id="CommitURL">
+            <a
+              href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`}
+              target="_blank"
+            >
+              {String(process.env.COMMIT_REF).substring(0,8)}
+            </a>
+          </div>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
