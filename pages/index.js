@@ -17,6 +17,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const MY_VAR = process.env.COMMIT_REF || undefined;
   return (
     <Layout home>
       <Head>
@@ -29,21 +30,21 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
         <p>
-          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`} target="_blank">
             1.0.0
           </a>
         </p>
         <p>
-          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`} target="_blank">
             1.0.0
           </a>
         </p>
         <div id="CommitURL">
             <a
-              href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`}
+              href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`}
               target="_blank"
             >
-              {`${process.env.COMMIT_REF}`.substring(0,8)}
+              {`${MY_VAR}`.substring(0,8)}
             </a>
           </div>
       </section>
