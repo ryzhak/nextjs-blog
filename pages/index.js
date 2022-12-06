@@ -44,7 +44,7 @@ export default function Home({ allPostsData }) {
               href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`}
               target="_blank"
             >
-              {`${MY_VAR}`.substring(0,8)}
+              {`${MY_VAR}`}
             </a>
           </div>
       </section>
