@@ -29,6 +29,17 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
         <p>
+          {/* frontend version with a URL to commit hash, COMMIT_REF is only available in production netlify build */}
+          {process.env.COMMIT_REF && (
+            <div id="CommitURL">
+              <a
+                href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`}
+                target="_blank"
+              >
+                {process.env.COMMIT_REF.substring(0,8)}
+              </a>
+            </div>
+          )}
           App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">{config.version}</a>
         </p>
       </section>
