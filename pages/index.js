@@ -5,6 +5,7 @@ import Date from '../components/date';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import config from '../package.json';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -26,6 +27,11 @@ export default function Home({ allPostsData }) {
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        </p>
+        <p>
+          App version (VERCEL_GIT_COMMIT_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`} target="_blank">{config.version}</a>
+          App version (NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA}`} target="_blank">{config.version}</a>
+          App version (NEXT_PUBLIC_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.NEXT_PUBLIC_SHA}`} target="_blank">{config.version}</a>
         </p>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
