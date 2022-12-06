@@ -29,9 +29,7 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
         <p>
-          App version (VERCEL_GIT_COMMIT_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.VERCEL_GIT_COMMIT_SHA}`} target="_blank">{config.version}</a>
-          App version (NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA}`} target="_blank">{config.version}</a>
-          App version (NEXT_PUBLIC_SHA): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.NEXT_PUBLIC_SHA}`} target="_blank">{config.version}</a>
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`} target="_blank">{config.version}</a>
         </p>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
