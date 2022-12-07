@@ -53,7 +53,7 @@ export default function Home({ allPostsData }) {
             href={`https://github.com/ubiquity/ubiquity-dollar/commit/${COMMIT_HASH}`}
             target="_blank"
           >
-            {COMMIT_HASH ? COMMIT_HASH.substring(0,8) : ''}
+            {COMMIT_HASH}
           </a>
         </div>
       </section>
