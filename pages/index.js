@@ -7,6 +7,8 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import config from '../package.json';
 
+const COMMIT_HASH = process.env.COMMIT_REF;
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -17,7 +19,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const MY_VAR = process.env.COMMIT_REF;
   return (
     <Layout home>
       <Head>
@@ -30,23 +31,31 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
         <p>
-          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`} target="_blank">
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${COMMIT_HASH}`} target="_blank">
             1.0.0
           </a>
         </p>
         <p>
-          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`} target="_blank">
+          App version (COMMIT_REF): <a href={`https://github.com/ubiquity/ubiquity-dollar/commit/${COMMIT_HASH}`} target="_blank">
             1.0.0
           </a>
         </p>
         <div id="CommitURL">
             <a
-              href={`https://github.com/ubiquity/ubiquity-dollar/commit/${MY_VAR}`}
+              href={`https://github.com/ubiquity/ubiquity-dollar/commit/${COMMIT_HASH}`}
               target="_blank"
             >
-              {MY_VAR}
+              {COMMIT_HASH}
             </a>
           </div>
+        <div id="CommitURL">
+          <a
+            href={`https://github.com/ubiquity/ubiquity-dollar/commit/${COMMIT_HASH}`}
+            target="_blank"
+          >
+            {COMMIT_HASH ? COMMIT_HASH.substring(0,8) : ''}
+          </a>
+        </div>
       </section>
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
