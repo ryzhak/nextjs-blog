@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
               href={`https://github.com/ubiquity/ubiquity-dollar/commit/${process.env.COMMIT_REF}`}
               target="_blank"
             >
-              yo
+              {`${process.env.COMMIT_REF}`}
             </a>
           </div>
       </section>
